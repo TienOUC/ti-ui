@@ -2,7 +2,7 @@
   <button
     class="ti-button"
     :class="[
-      `ti-button--${type}`,
+      `ti-button_${type}`,
       {
         'is-plain': plain,
         'is-round': round,
@@ -90,7 +90,7 @@ export default {
     color: #409eff;
   }
 
-  &--primary {
+  &_primary {
     color: #fff;
     background-color: #409eff;
     border-color: #409eff;
@@ -113,7 +113,7 @@ export default {
       }
     }
   }
-  &--success {
+  &_success {
     color: #fff;
     background-color: #67c23a;
     border-color: #67c23a;
@@ -135,7 +135,7 @@ export default {
       }
     }
   }
-  &--info {
+  &_info {
     color: #fff;
     background-color: #909399;
     border-color: #909399;
@@ -157,7 +157,7 @@ export default {
       }
     }
   }
-  &--warning {
+  &_warning {
     color: #fff;
     background-color: #e6a23c;
     border-color: #e6a23c;
@@ -179,7 +179,7 @@ export default {
       }
     }
   }
-  &--danger {
+  &_danger {
     color: #fff;
     background-color: #f56c6c;
     border-color: #f56c6c;
@@ -211,8 +211,11 @@ export default {
     border-radius: 50%;
     padding: 12px;
   }
-  [class*='el-icon-'] + span {
+  [class*='ti-icon-'] + span {
     margin-left: 5px;
   }
+}
+.ti-button.is-disabled{
+   cursor: no-drop;
 }
 </style>

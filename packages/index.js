@@ -10,6 +10,7 @@ import RadioGroup from './radio-group'
 import Switch from './switch'
 import Form from './form'
 import FormItem from './form-item'
+import './fonts/font.scss'
 
 const components = [
   Button,

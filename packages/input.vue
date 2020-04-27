@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="ti-input" :class="{ 'ti-input-suffix': showSuffix }">
+    <div class="ti-input" :class="{ 'ti-input_suffix': showSuffix }">
       <input
         class="ti-input_inner"
         :class="{ 'is-disabled': disabled }"
@@ -113,7 +113,7 @@ export default {
   }
 }
 
-.ti-input-suffix {
+.ti-input_suffix {
   .ti-input_inner {
     padding-right: 30px;
   }

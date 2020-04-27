@@ -1,16 +1,16 @@
 <template>
   <label class="ti-radio" :class="{ 'is-checked': value === model }">
-    <span class="ti-radio-input">
-      <span class="ti-radio-inner"></span>
+    <span class="ti-radio_input">
+      <span class="ti-radio_inner"></span>
       <input
         :value="label"
         :name="name"
         v-model="model"
-        class="ti-radio-original"
+        class="ti-radio_original"
         type="radio"
       />
     </span>
-    <span class="ti-radio-label"></span>
+    <span class="ti-radio_label"></span>
     <slot></slot>
     <template v-if="!$slots.default">{{ label }}</template>
   </label>
@@ -65,7 +65,7 @@ export default {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  .htim-radio-input {
+  .htim-radio_input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -73,7 +73,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .ti-radio-inner {
+    .ti-radio_inner {
       border: 1px solid #dcdfe6;
       border-radius: 100%;
       width: 14px;
@@ -84,7 +84,7 @@ export default {
       display: inline-block;
       box-sizing: border-box;
     }
-    .ti-radio-original {
+    .ti-radio_original {
       // opacity: 0;
       // outline: none;
       // position: absolute;
@@ -96,7 +96,7 @@ export default {
       // margin: 0;
     }
   }
-  .ti-radio-label {
+  .ti-radio_label {
     font-size: 14px;
     padding-left: 10px;
   }

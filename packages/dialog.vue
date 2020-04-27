@@ -1,6 +1,10 @@
 <template>
-  <transition name="ti-dialog">
-    <div class="ti-dialog_wrapper" v-show="visable" @click.self="handleClose">
+  <transition
+    name="dialog-fade"
+    @after-enter="afterEnter"
+    @after-leave="afterLeave"
+  >
+    <div class="ti-dialog_wrapper" v-show="visible" @click.self="handleClose">
       <div class="ti-dialog" :style="{ width: width, marginTop: top }">
         <div class="ti-dialog_header">
           <slot name="title">
@@ -11,9 +15,10 @@
           </button>
         </div>
         <div class="ti-dialog_body">
+          <!-- 默认插槽 -->
           <slot></slot>
         </div>
-        <div v-if="$slots.footer" class="ti-dialog_footer">
+        <div class="ti-dialog_footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -22,13 +27,12 @@
 </template>
 
 <script>
-
 export default {
   name: 'TiDialog',
   props: {
     title: {
       type: String,
-      default: 'Tips'
+      default: '提示'
     },
     width: {
       type: String,
@@ -38,41 +42,26 @@ export default {
       type: String,
       default: '15vh'
     },
-    visable: {
+    visible: {
       type: Boolean,
       default: false
     }
   },
   methods: {
     handleClose () {
-      // console.log('close test')
-      this.$emit('dialogClose', false)
+      this.$emit('update:visible', false)
+    },
+    afterEnter () {
+      this.$emit('opened')
+    },
+    afterLeave () {
+      this.$emit('close')
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-// .ti-dialog {
-//   &-enter {
-//     opacity: 0;
-//   }
-//   &-enter-active {
-//     transition: all 0.5s;
-//   }
-//   &-dialog-enter-to {
-//     opacity: 1;
-//   }
-//   &-leave {
-//     opacity: 1;
-//   }
-//   &-leave-active {
-//     transition: all 0.5s;
-//   }
-//   &-leave-to {
-//     opacity: 0;
-//   }
-// }
+<style lang="scss">
 .ti-dialog_wrapper {
   position: fixed;
   top: 0;
@@ -133,11 +122,11 @@ export default {
   }
 }
 
-.ti-dialog-enter-active {
+.dialog-fade-enter-active {
   animation: dialog-fade-in 0.4s;
 }
 
-.ti-dialog-leave-active {
+.dialog-fade-leave-active {
   animation: dialog-fade-out 0.4s;
 }
 

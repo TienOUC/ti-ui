@@ -1,16 +1,16 @@
 <template>
   <label class="ti-checkbox" :class="{ 'is-checked': isChecked }">
-    <span class="ti-checkbox-input">
-      <span class="ti-checkbox-inner"></span>
+    <span class="ti-checkbox_input">
+      <span class="ti-checkbox_inner"></span>
       <input
         :name="name"
         v-model="model"
-        class="ti-checkbox-original"
+        class="ti-checkbox_original"
         type="checkbox"
         :value="label"
       />
     </span>
-    <span class="ti-checkbox-label"></span>
+    <span class="ti-checkbox_label"></span>
     <slot></slot>
     <template v-if="!$slots.default">{{ label }}</template>
   </label>
@@ -71,7 +71,7 @@ export default {
   white-space: nowrap;
   user-select: none;
   margin-right: 30px;
-  .ti-checkbox-input {
+  .ti-checkbox_input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -79,7 +79,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .ti-checkbox-inner {
+    .ti-checkbox_inner {
       display: inline-block;
       position: relative;
       border: 1px solid #dcdfe6;
@@ -107,7 +107,7 @@ export default {
         transform-origin: center;
       }
     }
-    .ti-checkbox-original {
+    .ti-checkbox_original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -117,7 +117,7 @@ export default {
       z-index: -1;
     }
   }
-  .ti-checkbox-label {
+  .ti-checkbox_label {
     display: inline-block;
     padding-left: 10px;
     line-height: 19px;
@@ -125,8 +125,8 @@ export default {
   }
 }
 .ti-checkbox.is-checked {
-  .ti-checkbox-input {
-    .ti-checkbox-inner {
+  .ti-checkbox_input {
+    .ti-checkbox_inner {
       background-color: #409eff;
       border-color: #409eff;
       &:after {
@@ -134,7 +134,7 @@ export default {
       }
     }
   }
-  .ti-checkbox-label {
+  .ti-checkbox_label {
     color: #409eff;
   }
 }
