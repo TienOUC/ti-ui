@@ -1,9 +1,9 @@
 {
   "name": "ti-ui-ouc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
   "main": "dist/ti-ui.umd.min.js",
-  "author":{
+  "author": {
     "name": "TienOUC",
     "Github": "https://github.com/TienOUC"
   },
