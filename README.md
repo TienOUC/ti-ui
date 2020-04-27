@@ -4,8 +4,8 @@
 安装组件库： `npm i ti-ui-ouc`
 
 全局导入：    
-`import TiUi form 'ti-ui-ouc'`   
-`import 'ti-ui-ouc/dist/ti-ui.css'`
+`import TiUI form 'ti-ui-ouc'`   
+`import 'ti-ui-ouc/dist/ti-ui-ouc.css'`
 
-`Vue.use(TiUi)`
+`Vue.use(TiUI)`
 
