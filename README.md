@@ -2,8 +2,8 @@
 
 初始化vue项目 vue created demo
 
-安装组件库 npm add ti-ui-ouc
+安装组件库 npm i ti-ui-ouc
 
-全局导入 import TiUI form 'ti-ui' import 'ti-ui/lib/ti-ui.css'
+全局导入 import TiUI form 'ti-ui' import 'ti-ui/dist/ti-ui.css'
 
 Vue.use(TiUI)
