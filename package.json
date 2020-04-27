@@ -1,5 +1,5 @@
 {
-  "name": "ti-ui",
+  "name": "ti-ui-ouc",
   "version": "0.1.0",
   "private": false,
   "main": "dist/ti-ui.umd.min.js",
