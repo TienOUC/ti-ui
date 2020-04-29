@@ -1,6 +1,6 @@
 {
   "name": "ti-ui-self",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "dist/ti-ui-self.umd.min.js",
   "author": {
