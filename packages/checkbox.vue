@@ -70,7 +70,8 @@ export default {
   display: inline-block;
   white-space: nowrap;
   user-select: none;
-  margin-right: 30px;
+  padding-left: 5px;
+  margin-right: 20px;
   .ti-checkbox_input {
     white-space: nowrap;
     cursor: pointer;
@@ -119,7 +120,7 @@ export default {
   }
   .ti-checkbox_label {
     display: inline-block;
-    padding-left: 10px;
+    padding-left: 5px;
     line-height: 19px;
     font-size: 14px;
   }
@@ -132,6 +133,15 @@ export default {
       &:after {
         transform: rotate(45deg) scaleY(1);
       }
+    }
+    .hm-checkbox_original {
+      opacity: 0;
+      outline: none;
+      position: absolute;
+      margin: 0;
+      width: 0;
+      height: 0;
+      z-index: -1;
     }
   }
   .ti-checkbox_label {

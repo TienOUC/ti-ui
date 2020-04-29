@@ -11,7 +11,7 @@
             <span class="ti-dialog_title">{{ title }}</span>
           </slot>
           <button class="ti-dialog_headerbtn" @click="handleClose">
-            <i class="el-icon-close"></i>
+            <i class="ti-icon-close"></i>
           </button>
         </div>
         <div class="ti-dialog_body">

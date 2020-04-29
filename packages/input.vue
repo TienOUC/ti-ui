@@ -12,8 +12,8 @@
         @input="handleInput"
       />
       <span class="ti-input_suffix" v-if="showSuffix">
-        <i v-if="clearable && value" class="ti-input-icon el-icon-circle-close ti-input-clear" @click="clear"></i>
-        <i v-if="showPassword && value" class="ti-input-icon el-icon-view ti-input-clear" @click="handlePassword"></i>
+        <i v-if="clearable && value" class="ti-input-icon ti-icon-circle-close ti-input-clear" @click="clear"></i>
+        <i v-if="showPassword && value" class="ti-input-icon ti-icon-view ti-input-clear" @click="handlePassword"></i>
       </span>
     </div>
   </div>
