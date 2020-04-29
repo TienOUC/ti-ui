@@ -9,3 +9,4 @@
 
 `Vue.use(TiUI)`
 
+说明文档：[ 点击查看 ](https://willtien.com/vuepress/components/button%E7%BB%84%E4%BB%B6.html)
