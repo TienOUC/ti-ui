@@ -9,4 +9,4 @@
 
 `Vue.use(TiUI)`
 
-说明文档：[ 点击查看 ](http://dodolo.top/pages/components/)
+说明文档：[ 点击查看 ](https://tienouc.gitee.io/vuepress/pages/components/button.html)
